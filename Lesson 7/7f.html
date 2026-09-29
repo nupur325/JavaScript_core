@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+            function celToFahr(celsius){
+                return (celsius * 9/5) +32;
+            }
+            function fahrToCels(fahrenheit) {
+                return (fahrenheit - 32) * 5 / 9;
+            }    
+
+            function convertTemp(degree,unit){
+                if (unit=='C'){
+                    const result=celToFahr(degree)
+                    return `${result}F`
+                }
+                else if (unit=="F"){
+                    const result=fahrToCels(degree)
+                    return `${result}C`
+                }
+            }
+
+            console.log(convertTemp(32,'C'))
+            console.log(convertTemp(92,'F'))
+        </script>
+    </body>
+</html>
